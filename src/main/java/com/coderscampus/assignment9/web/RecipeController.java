@@ -27,10 +27,28 @@ public class RecipeController {
 	    	
 	    }
 	    
+	    @GetMapping("/vegan")
+	    public List<Recipes> getVeganRecipes () throws IOException {
+	    	return recipeService.getVeganRecipes();
+	    }
+	    
+	    @GetMapping("/vegan-gluten-free")
+	    public List<Recipes> getVeganAndGlutenFreeRecipes() throws IOException {
+	    	return recipeService.getVeganAndGlutenFreeRecipes();
+	    }
+	    
+	    @GetMapping("/vegetarian")
+	    public List<Recipes> getVegetarianRecipes() throws IOException {
+	    	return recipeService.getVegetarianRecipes();
+	    }
+	    
+	    
+	    
 	    @GetMapping("/")
 	    public List<Recipes> getAllRecipes () throws IOException {
 	    	return recipeService.getAllRecipes();
 	    }
+	    
 	    
 
 }
